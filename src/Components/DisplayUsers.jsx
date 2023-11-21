@@ -21,19 +21,24 @@ const DisplayUsers = () => {
   };
 
   return (
-    <table className="table">
+    <table className="table table-hover table-bordered mx-auto text-center ">
       <thead>
         <tr>
+          <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">Email</th>
+          <th scope="col">Gender</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
         {data.map((user, id) => (
           <tr key={id}>
+            <td>{id}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
+            <td>{user.gender}</td>
+
             <td>
               <button className="btn btn-danger" onClick={() => deleteUser(id)}>
                 <MdDeleteForever />

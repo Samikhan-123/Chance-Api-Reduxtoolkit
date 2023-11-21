@@ -10,7 +10,7 @@ const UserDetails = () => {
 
   const addNewUser = (payload) => {
     dispatch(addUser(payload));
-    console.log(payload);
+    // console.log(payload);
   };
 
   return (
