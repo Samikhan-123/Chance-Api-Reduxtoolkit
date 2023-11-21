@@ -21,16 +21,28 @@ const DisplayUsers = () => {
   };
 
   return (
-    <ul className="list-group d-flex justify-content-between">
-      {data.map((user, id) => (
-        <li className="list-group-item list-item d-flex justify-content-between align-items-center" key={id}>
-          {user}
-          <button className="btn btn-danger" onClick={() => deleteUser(id)}>
-            <MdDeleteForever />
-          </button>
-        </li>
-      ))}
-    </ul>
+    <table className="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((user, id) => (
+          <tr key={id}>
+            <td>{user.name}</td>
+            <td>{user.email}</td>
+            <td>
+              <button className="btn btn-danger" onClick={() => deleteUser(id)}>
+                <MdDeleteForever />
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
