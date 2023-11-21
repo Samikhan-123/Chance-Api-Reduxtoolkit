@@ -14,6 +14,7 @@ const userSlice = createSlice({
 
         },
         clearAllUsers: (state, action) => {
+            console.log(state)
             return [];
         },
 

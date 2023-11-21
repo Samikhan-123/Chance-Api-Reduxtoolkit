@@ -17,7 +17,7 @@ const UserDetails = () => {
     <>
       <div className="content">
         <div className="admin-details d-flex justify-content-between">
-          <h2 className="fw-bolder">List Of User Details</h2>
+          <h2 className="fw-bolder m-2">List Of User Details :</h2>
           <button
             className="btn btn-primary fw-bold m-2"
             onClick={() => addNewUser(fakeUserData())}
